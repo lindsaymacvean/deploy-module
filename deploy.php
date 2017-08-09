@@ -46,5 +46,8 @@
 
 <?php echo $output; ?>
 </pre>
+<div>
+<?php print_r($_SERVER[URL]); ?>
+</div>
 </body>
 </html>
