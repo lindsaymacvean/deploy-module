@@ -11,6 +11,7 @@
 	$commands = array(
 		'echo $PWD',
 		'whoami',
+		'git describe --tag',
 		'git pull',
 		'git status',
 		'git submodule sync',
@@ -47,7 +48,7 @@
 <?php echo $output; ?>
 </pre>
 <div>
-<?php print_r($_SERVER[URL]); ?>
+<?php print_r($_SERVER); ?>
 </div>
 </body>
 </html>
