@@ -47,9 +47,9 @@
 
 <?php echo $output; ?>
 </pre>
-<?php include('github-webhook-handler.php'); ?>
 <div>
 <?php print_r($_SERVER); ?>
+<?php include('github-webhook-handler.php'); ?>
 </div>
 </body>
 </html>

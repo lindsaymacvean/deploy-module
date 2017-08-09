@@ -8,7 +8,7 @@
  */
 
 $hookSecret = getenv('GITHUB_TOKEN');  # set NULL to disable check
-
+echo $hookSecret;
 
 set_error_handler(function($severity, $message, $file, $line) {
 	throw new \ErrorException($message, 0, $severity, $file, $line);
@@ -35,6 +35,7 @@ if ($hookSecret !== NULL) {
 
 	$rawPost = file_get_contents('php://input');
 	if ($hash !== hash_hmac($algo, $rawPost, $hookSecret)) {
+		echo $hash;
 		throw new \Exception('Hook secret does not match.');
 	}
 };
