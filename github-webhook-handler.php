@@ -7,7 +7,7 @@
  * @author  Miloslav Hůla (https://github.com/milo)
  */
 
-$hookSecret = shell_exec("ENV['GITHUB_TOKEN']");  # set NULL to disable check
+$hookSecret = getenv('GITHUB_TOKEN');  # set NULL to disable check
 
 
 set_error_handler(function($severity, $message, $file, $line) {
