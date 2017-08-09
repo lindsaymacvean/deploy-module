@@ -35,7 +35,7 @@ if ($hookSecret !== NULL) {
 
 	$rawPost = file_get_contents('php://input');
 	if ($hash !== hash_hmac($algo, $rawPost, $hookSecret)) {
-		echo $hash;
+		echo hash_hmac($algo, $rawPost, $hookSecret);
 		throw new \Exception('Hook secret does not match.');
 	}
 };
