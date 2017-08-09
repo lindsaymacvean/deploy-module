@@ -47,7 +47,7 @@
 
 <?php echo $output; ?>
 </pre>
-<?php $post_body = var_dump($_POST); echo hash_hmac('sha1', $post_body, 'test'); ?>
+<?php include('github-webhook-handler.php'); ?>
 <div>
 <?php print_r($_SERVER); ?>
 </div>
